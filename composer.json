@@ -1,0 +1,17 @@
+{
+	"name": "core/util",
+	"type": "library",
+	"license": "GPL-3.0+",
+	"authors": [{
+		"name": "Philip Whitt"
+	}],
+	"require": {
+		"php": ">=5.3",
+		"fliglio/web": "dev-master"
+	},
+	"autoload": {
+		"psr-0": { 
+			"RandomUser\\" : ""
+		}
+	}
+}

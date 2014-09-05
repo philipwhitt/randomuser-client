@@ -1,0 +1,62 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "8d82f40899eb20a4670fa67c530263be",
+    "packages": [
+        {
+            "name": "fliglio/web",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benschw/fliglio-web.git",
+                "reference": "ff6244cb584c3a1f72c52c804e02373ce420c9fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benschw/fliglio-web/zipball/ff6244cb584c3a1f72c52c804e02373ce420c9fe",
+                "reference": "ff6244cb584c3a1f72c52c804e02373ce420c9fe",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Fliglio\\Web\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Schwartz",
+                    "email": "benschw@gmail.com"
+                }
+            ],
+            "time": "2013-12-18 03:06:45"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "fliglio/web": 20
+    },
+    "prefer-stable": false,
+    "platform": {
+        "php": ">=5.3"
+    },
+    "platform-dev": [
+
+    ]
+}
