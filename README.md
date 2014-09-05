@@ -1,7 +1,15 @@
 # PHP Random User Generator
 
-Simple PHP client to api.randomuser.me
---------------------------------------------
+Install
+----------------------------------
+
+```json
+
+
+```
+
+Simple PHP client to randomuser.me
+----------------------------------
 Example:
 ```php
 <?php
