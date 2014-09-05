@@ -6,7 +6,6 @@ Install via composer
 ```javascript
 {
 	"require": {
-		"php"                   : ">=5.3",
 		"randomuser/generator"  : "dev-master"
 	}
 }
@@ -31,3 +30,5 @@ Unit Tests
 Run tests using:
 
 	$ phpunit test
+
+
