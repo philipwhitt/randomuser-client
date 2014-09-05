@@ -1,11 +1,15 @@
 # PHP Random User Generator
 
 Install
-----------------------------------
-
-```json
-
-
+-------
+Install via composer
+```javascript
+{
+	"require": {
+		"php"                   : ">=5.3",
+		"randomuser/generator"  : "dev-master"
+	}
+}
 ```
 
 Simple PHP client to randomuser.me
