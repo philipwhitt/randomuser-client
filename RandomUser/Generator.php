@@ -49,7 +49,14 @@ class Generator {
 	}
 
 	public function getUsers($num, $type=null) {
-		$encData = $this->resource->get(array('results' => $num))->getContent();
+		$params = array();
+		$params['results'] = $num;
+
+		if (!is_null($type)) {
+			$params['gender'] = $type;
+		}
+
+		$encData = $this->resource->get($params)->getContent();
 
 		$data = array();
 		foreach ($encData['results'] as $encUser) {
