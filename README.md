@@ -32,3 +32,11 @@ Run tests using:
 	$ phpunit test
 
 
+Helpful Links
+-------------
+
+More examples:
+http://www.philipwhitt.com/blog/2014/09/php-random-user-generator/40
+
+Randomuser.me Documentation:
+http://randomuser.me/documentation.html
