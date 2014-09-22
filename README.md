@@ -1,3 +1,5 @@
+[![Build Status](https://drone.io/github.com/philipwhitt/randomuser-client/status.png)](https://drone.io/github.com/philipwhitt/randomuser-client/latest)
+
 # PHP Random User Generator
 
 Install
