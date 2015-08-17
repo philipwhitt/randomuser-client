@@ -2,16 +2,16 @@
 
 namespace RandomUser;
 
-use Fliglio\Web\RestResource;
-use Fliglio\Web\MediaType;
+use GuzzleHttp\Client;
 
 class Generator {
 
-	private $resource;
+	private $client;
 
 	public function __construct() {
-		$this->resource = new RestResource('api.randomuser.me/');
-		$this->resource->accept(MediaType::JSON);
+		$this->client = new Client([
+			'base_url' => 'http://api.randomuser.me'
+		]);
 	}
 
 
@@ -37,15 +37,15 @@ class Generator {
 	// Worker methods
 
 	public function getUser($type=null) {
-		$params = array();
+		$params = [];
 
 		if (!is_null($type)) {
 			$params['gender'] = $type;
 		}
 
-		$encData = $this->resource->get($params)->getContent();
+		$json = $this->client->get('/', ['query' => $params])->json();
 
-		return $this->mapUser($encData['results'][0]['user']);
+		return $this->mapUser($json['results'][0]['user']);
 	}
 
 	public function getUsers($num, $type=null) {
@@ -56,10 +56,10 @@ class Generator {
 			$params['gender'] = $type;
 		}
 
-		$encData = $this->resource->get($params)->getContent();
+		$json = $this->client->get('/', ['query' => $params])->json();
 
 		$data = array();
-		foreach ($encData['results'] as $encUser) {
+		foreach ($json['results'] as $encUser) {
 			$data[] = $this->mapUser($encUser['user']);
 		}
 		return $data;
@@ -85,7 +85,6 @@ class Generator {
 			->setDateOfBirth($encUser['dob'])
 			->setPhone($encUser['phone'])
 			->setCell($encUser['cell'])
-			->setSSN($encUser['SSN'])
 			->setPicture($encUser['picture']);
 
 		return $user;
