@@ -84,6 +84,7 @@ class Generator {
 			->setUsername($encUser['username'])
 			->setPassword($encUser['password'])
 			->setSalt($encUser['salt'])
+			->setSsn($encUser['SSN'])
 			->setMd5($encUser['md5'])
 			->setSha1($encUser['sha1'])
 			->setSha256($encUser['sha256'])
