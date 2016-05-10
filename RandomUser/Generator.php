@@ -45,7 +45,7 @@ class Generator {
 
 		$json = $this->client->get('/', ['query' => $params])->json();
 
-		return $this->mapUser($json['results'][0]['user']);
+		return $this->mapUser($json['results'][0]);
 	}
 
 	public function getUsers($num, Filter $filter = null) {
@@ -66,7 +66,7 @@ class Generator {
 
 		$data = array();
 		foreach ($json['results'] as $encUser) {
-			$data[] = $this->mapUser($encUser['user']);
+			$data[] = $this->mapUser($encUser);
 		}
 		return $data;
 	}
@@ -77,22 +77,24 @@ class Generator {
 			->setGender($encUser['gender'])
 			->setFirstName($encUser['name']['first'])
 			->setLastName($encUser['name']['last'])
+
 			->setStreetAddress($encUser['location']['street'])
 			->setCity($encUser['location']['city'])
 			->setState($encUser['location']['state'])
-			->setZip($encUser['location']['zip'])
-			->setUsername($encUser['username'])
-			->setPassword($encUser['password'])
-			->setSalt($encUser['salt'])
-			->setSsn($encUser['SSN'])
-			->setMd5($encUser['md5'])
-			->setSha1($encUser['sha1'])
-			->setSha256($encUser['sha256'])
+			->setZip($encUser['location']['postcode'])
+
+			->setUsername($encUser['login']['username'])
+			->setPassword($encUser['login']['password'])
+			->setSalt($encUser['login']['salt'])
+			->setMd5($encUser['login']['md5'])
+			->setSha1($encUser['login']['sha1'])
+			->setSha256($encUser['login']['sha256'])
+
 			->setRegistered($encUser['registered'])
 			->setDateOfBirth($encUser['dob'])
 			->setPhone($encUser['phone'])
 			->setCell($encUser['cell'])
-			->setPicture($encUser['picture']);
+			->setPicture($encUser['picture']['medium']);
 
 		return $user;
 	}
