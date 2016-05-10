@@ -8,7 +8,7 @@ Install via composer
 ```javascript
 {
 	"require": {
-		"randomuser/generator"  : "dev-master"
+		"randomuser/generator"  : "1.0.*"
 	}
 }
 ```
