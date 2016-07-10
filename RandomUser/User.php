@@ -33,7 +33,7 @@ class User {
 		return $this->gender;
 	}
 	public function getName() {
-		return $this->firstName.' '.$this->lastName();
+		return $this->firstName.' '.$this->lastName;
 	}
 	public function getFirstName() {
 		return $this->firstName;
