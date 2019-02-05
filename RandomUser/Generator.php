@@ -10,7 +10,7 @@ class Generator {
 
 	public function __construct() {
 		$this->client = new Client([
-			'base_url' => 'http://api.randomuser.me'
+            'base_uri' => 'https://api.randomuser.me/',
 		]);
 	}
 
@@ -43,7 +43,8 @@ class Generator {
 			$params['gender'] = $type;
 		}
 
-		$json = $this->client->get('/', ['query' => $params])->json();
+		//$json = json_encode($this->client->get('/', ['query' => $params])->getBody(), true);
+		$json = json_decode($this->client->get('', ['query' => $params])->getBody(), true);
 
 		return $this->mapUser($json['results'][0]);
 	}
@@ -62,7 +63,7 @@ class Generator {
 			}
 		}
 
-		$json = $this->client->get('/', ['query' => $params])->json();
+		$json = json_decode($this->client->get('', ['query' => $params])->getBody(), true);
 
 		$data = array();
 		foreach ($json['results'] as $encUser) {
