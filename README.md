@@ -1,4 +1,5 @@
-[![Build Status](https://drone.io/github.com/philipwhitt/randomuser-client/status.png)](https://drone.io/github.com/philipwhitt/randomuser-client/latest)
+[![Build Status](https://travis-ci.org/philipwhitt/randomuser-client.svg?branch=master)](https://travis-ci.org/philipwhitt/randomuser-client)
+[![Latest Stable Version](https://poser.pugx.org/atlassian/randomuser-client/v/stable.svg)](https://packagist.org/packages/randomuser/generator)
 
 # PHP Random User Generator
 
