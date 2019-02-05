@@ -15,4 +15,4 @@ install:
   - composer up
 
 script:
-  - ./vendor/bin/phpunit -c test/ci.xml
+  - ./vendor/bin/phpunit test
